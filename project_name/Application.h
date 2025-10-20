@@ -1,37 +1,20 @@
-/*********************************************************************
- * @file  Apllication.h
- * @author <mettre l'adresse mail ou nom prenom>
- * @brief Fichier header de l'application
- *********************************************************************/
 #ifndef APPLICATION_H_
 #define APPLICATION_H_
 
-/**
-  * @class Application
-  * @brief Classe Application 
-*/    
+#include "UltraSonicSensor.hpp"
+
 class Application
 {
-  public :
-    /**
-     * @fn Application();
-     * @brief Constructeur par defaut
-    */    
+  private:
+    UltrasonicSensor* SensorSon;  // <-- membre de classe
+    int buzzerPin;
+
+  public:
     Application();
-    /**
-     * @fn Application();
-     * @brief Destructeur
-    */    
-    ~Application();    
-    /**
-     * @fn void init(void)
-     * @brief Fonction d'initialisation de l'application
-    */
+    ~Application();
+
     void init(void);
-    /**
-     * @fn void run(void)
-     * @brief Fonction de lancement de l'application
-    */
     void run(void);
 };
+
 #endif
